@@ -67,3 +67,29 @@ ALPHABETA(node, depth, α, β, isMax)
                 break   // PRUNE
         return best
 
+DECISION TREE
+
+Algorithm DecisionTree(Dataset, Attributes, Target)
+
+1. If all records in Dataset belong to the same Target class
+      Return a Leaf node with that class
+
+2. If Attributes list is empty
+      Return a Leaf node with the majority Target class in Dataset
+
+3. Select the Best_Attribute from Attributes
+      (using Information Gain / Gini Index)
+
+4. Create a Decision Node using Best_Attribute
+
+5. For each value v of Best_Attribute:
+      a. Create a subset Dataset_v where Best_Attribute = v
+
+      b. If Dataset_v is empty
+            Attach a Leaf node with majority Target class
+         Else
+            Attach subtree:
+            DecisionTree(Dataset_v, Attributes − Best_Attribute, Target)
+
+6. Return the Decision Node
+
