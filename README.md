@@ -93,3 +93,20 @@ Algorithm DecisionTree(Dataset, Attributes, Target)
 
 6. Return the Decision Node
 
+
+WATER JUG PROBLEM
+Algorithm WaterJugProblem(Jug1, Jug2, Target):
+
+1. Start with both jugs empty: (0, 0)
+
+2. Repeat until target is reached in any jug:
+     a. Fill any jug completely
+     b. Empty any jug completely
+     c. Pour water from one jug to the other
+        until one is full or the other is empty
+
+3. Keep track of steps to reach the target
+
+4. Stop when target is measured
+
+
